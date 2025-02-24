@@ -12,7 +12,6 @@ function checkNumber() {
     if (num <= 1) {
         isPrimeNumber = false;
     }
-
     // Wir prüfen jetzt jede Zahl von 2 bis num-1
     for (var counter = 2; counter < num; counter = counter + 1) {
         // Wenn num durch counter teilbar ist, ist num keine Primzahl
