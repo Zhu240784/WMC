@@ -2,10 +2,35 @@
 <html>
 <head>
     <title>Easy Prime Checker</title>
+    <style>
+        body {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-YiFm59RLF_x-kJRTJnYqbvt6ArrOd_2fjA&s);
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        input {
+            font-size: 100px;
+            padding: 50px;
+            width: 750px;
+        }
+
+        button {
+            font-size: 100px;
+            padding: 50px 100px;
+            cursor: pointer;
+        }
+
+        #result {
+            font-size: 110px;
+            margin-top: 80px;
+            color: honeydew;
+        }
+    </style>
 </head>
 <body>
+    <h1>Easy Prime Checker</h1>
     <input id="number" placeholder="Type a number">
-    <button onclick="checkPrime()">Check Number</button>
+    <button onclick="checkNumber()">Check Number</button>
     <p id="result"></p>
 
     <script src="script.js"></script>
