@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schaltjahr Prüfer</title>
+  <style>
+    body {
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+    #container {
+      text-align: center;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 18px;
+      margin: 5px;
+    }
+    p {
+      margin-top: 10px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h2>Ist das ein Schaltjahr?</h2>
+    <input type="number" id="yearInput" placeholder="Jahr eingeben" />
+    <button id="checkButton">Prüfen</button>
+    <p id="resultText"></p>
+  </div>
+
+  <script>
+    const input = document.getElementById('yearInput');
+    const button = document.getElementById('checkButton');
+    const result = document.getElementById('resultText');
+
+    button.addEventListener('click', () => {
+      const year = parseInt(input.value);
+
+      // DEBUGGER: Hier kannst du stoppen und Variablen untersuchen
+      debugger;
+
+      const isLeap = isLeapYear(year);
+      result.textContent = isLeap
+        ? `${year} ist ein Schaltjahr.`
+        : `${year} ist kein Schaltjahr.`;
+    });
+
+    function isLeapYear(year) {
+      if (isNaN(year)) return false;
+      return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+    }
+  </script>
+</body>
+</html>
